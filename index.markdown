@@ -167,7 +167,7 @@ highlight {
     <a href="https://mingyoseo.com/">Mingyo Seo<sup>1*</sup></a>&nbsp;&nbsp;&nbsp;
     <a href="https://yycho0108.github.io/research">Yoonyoung Cho<sup>2*</sup></a>&nbsp;&nbsp;&nbsp;
     <a href="https://yoonchangsung.com/">Yoonchang Sung<sup>1</sup></a>&nbsp;&nbsp;&nbsp;
-    <a href="https://www.cs.utexas.edu/~pstone/">Peter Stone<sup>1&dagger;</sup></a>&nbsp;&nbsp;&nbsp;
+    <a href="https://www.cs.utexas.edu/~pstone/">Peter Stone<sup>1</sup></a>&nbsp;&nbsp;&nbsp;
     <a href="https://yukezhu.me/">Yuke Zhu<sup>1&dagger;</sup></a>&nbsp;&nbsp;&nbsp;
     <a href="https://beomjoonkim.github.io/">Beomjoon Kim<sup>2&dagger;</sup></a>&nbsp;&nbsp;&nbsp; 
   </h3>
@@ -175,13 +175,13 @@ highlight {
   <h3>
     <a href="https://www.utexas.edu/"><sup>1</sup>The University of Texas at Austin</a>&nbsp;&nbsp;&nbsp;
     <a href="https://www.kaist.ac.kr/en/"><sup>2</sup>Korea Advanced Institute of Science and Technology</a><br>
-    <sup>*</sup> Equal congribution&nbsp;&nbsp;&nbsp;
+    <sup>*</sup> Equal contribution&nbsp;&nbsp;&nbsp;
     <sup>&dagger;</sup> Equal advising
   </h3>
 </center>
 <center>
   <h2>
-    <a href="http://arxiv.org/abs/XXXX.XXXXXX">Paper</a> | <a href="https://github.com/kiwi-sherbet/PRESTO">Code</a>
+    <a href="https://arxiv.org/abs/2409.16012">Paper</a> | <a href="./src/file/appendix.pdf" download>Appendix</a>
   </h2>
 </center>
 
@@ -282,6 +282,9 @@ highlight {
           </video>
         </td>
       </tr>
+      <tr><td></td><td></td><td><p align="right">
+	  <font color="blue">Collision-free</font>/<font color="red">Colliding</font>
+      </p></td></tr>
     </tbody>
   </table>
   <table align=center width=800px><tr><td><p align="justify" width="20%">
@@ -332,7 +335,7 @@ highlight {
         author={Seo, Mingyo and Cho, Yoonyoung and Sung, Yoonchang and Stone, Peter and
           Zhu, Yuke and Kim, Beomjoon},
         year={2024}
-        eprint={XXXX.XXXXXX},
+        eprint={2409.16012},
         archivePrefix={arXiv},
         primaryClass={cs.RO}
       }
