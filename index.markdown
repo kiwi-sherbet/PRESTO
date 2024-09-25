@@ -16,13 +16,13 @@ categories: projects
 <script src="/src/js/viewstl/init.js"></script>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LLEPNK1F3W"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TDC3EZ02LM"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-LLEPNK1F3W');
+  gtag('config', 'G-TDC3EZ02LM');
 </script>
 
 <script>
