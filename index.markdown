@@ -288,7 +288,7 @@ highlight {
     </tbody>
   </table>
   <table align=center width=800px><tr><td><p align="justify" width="20%">
-  Across all levels, PRESTO consistently outperforms the pure learning algorithms SceneDiffuser and Motion Planning Diffuser (MPD), which lack a key-configuration-based environment representation and a motion-planning-based objective, respectively. Compared to Bi-RRT, PRESTO uses diffusion-learned trajectory priors to generate collision-free trajectories more efficiently, especially in narrow passages. Additionally, compared to TrajOpt, an optimization-based method, PRESTO's high-quality initial trajectories lead to faster convergence in complex domains, despite the computational overhead of running the diffusion model.
+  Across all levels, PRESTO consistently outperforms the pure learning algorithms <a href="https://scenediffuser.github.io/">SceneDiffuser</a> and <a href="https://arxiv.org/abs/2308.01557">Motion Planning Diffuser (MPD)</a>, which lack a key-configuration-based environment representation and a motion-planning-based objective, respectively. Compared to Bi-RRT, PRESTO uses diffusion-learned trajectory priors to generate collision-free trajectories more efficiently, especially in narrow passages. Additionally, compared to <a href="https://rll.berkeley.edu/trajopt/doc/sphinx_build/html/">TrajOpt</a>, an optimization-based method, PRESTO's high-quality initial trajectories lead to faster convergence in complex domains, despite the computational overhead of running the diffusion model.
   </p></td></tr></table>
 <hr>
 
@@ -304,7 +304,7 @@ highlight {
     </tbody>
   </table>
   <table align=center width=800px><tr><td><p align="justify" width="20%">
-  Compared to PRESTO, Point-Cloud Conditioning shows performance degradation across problem levels and post-processing iterations, with higher collision rates and penetration depths that worsen with complexity. Similarly, Training Without TrajOpt exhibits consistent performance degradation across all levels, though less severe than Point-Cloud Conditioning. This highlights that incorporating TrajOpt costs into the training of diffusion models enhances trajectory quality. Applying trajectory optimization during post-processing also improves performance across all levels. Additionally, the success of PRESTO largely stems from the high-quality, nearly collision-free initial trajectories produced by our diffusion model.
+  Compared to PRESTO, <i>Point-Cloud Conditioning</i> shows performance degradation across problem levels and post-processing iterations, with higher collision rates and penetration depths that worsen with complexity. Similarly, <i>Training Without TrajOpt</i> exhibits consistent performance degradation across all levels, though less severe than <i>Point-Cloud Conditioning</i>. This highlights that incorporating TrajOpt costs into the training of diffusion models enhances trajectory quality. Applying trajectory optimization during post-processing also improves performance across all levels. Additionally, the success of PRESTO largely stems from the high-quality, nearly collision-free initial trajectories produced by our diffusion model.
   </p></td></tr></table>
   <br>
   <table border="0" cellspacing="10" cellpadding="0" align="center" width=800px> 
