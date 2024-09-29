@@ -18,7 +18,7 @@ If you find our work useful in your research, please consider [citing](#citing).
         title={PRESTO: Fast motion planning using diffusion models based on
           key-configuration environment representation},
         author={Seo, Mingyo and Cho, Yoonyoung and Sung, Yoonchang and Stone, Peter and Zhu, Yuke and Kim, Beomjoon},
-        year={2024}
+        year={2024},
         eprint={2409.16012},
         archivePrefix={arXiv},
         primaryClass={cs.RO}
