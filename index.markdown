@@ -173,8 +173,8 @@ highlight {
   </h3>
 <center>
   <h3>
-    <a href="https://www.utexas.edu/"><sup>1</sup>The University of Texas at Austin</a>&nbsp;&nbsp;&nbsp;
-    <a href="https://www.kaist.ac.kr/en/"><sup>2</sup>Korea Advanced Institute of Science and Technology</a><br>
+    <a href="https://www.utexas.edu/"><sup>1</sup>UT Austin</a>&nbsp;&nbsp;&nbsp;
+    <a href="https://www.kaist.ac.kr/en/"><sup>2</sup>KAIST</a>&nbsp;&nbsp;&nbsp;
     <sup>*</sup> Equal contribution&nbsp;&nbsp;&nbsp;
     <sup>&dagger;</sup> Equal advising
   </h3>
