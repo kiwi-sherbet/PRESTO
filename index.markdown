@@ -4,7 +4,9 @@ permalink: /
 categories: projects
 ---
 
+<link media="all" href="./css/glab.css" type="text/css" rel="StyleSheet">
 <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>PRESTO: Fast motion planning using diffusion models based on key-configuration environment representation</title>
 
@@ -14,6 +16,7 @@ categories: projects
 <script src="./src/popup.js" type="text/javascript"></script>
 <script src="/src/js/viewstl/stl_viewer.min.js"></script>
 <script src="/src/js/viewstl/init.js"></script>
+<script src="https://kit.fontawesome.com/ef67f68cfb.js" crossorigin="anonymous"></script>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDC3EZ02LM"></script>
@@ -65,7 +68,6 @@ $(document).ready(initStlViewer);
 // redefining default features
 var _POPUP_FEATURES = 'width=500,height=300,resizable=1,scrollbars=1,titlebar=1,status=1';
 </script>
-<link media="all" href="./css/glab.css" type="text/css" rel="StyleSheet">
 <style type="text/css" media="all">
 body {
     font-family: "Titillium Web","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -180,9 +182,12 @@ highlight {
   </h3>
 </center>
 <center>
-  <h2>
-    <a href="https://arxiv.org/abs/2409.16012">Paper</a> | <a href="./src/file/appendix.pdf" download>Appendix</a>
-  </h2>
+  <h3>
+    <a href="https://arxiv.org/abs/2409.16012">
+      <i class="ai ai-arxiv"></i> Paper</a> |
+    <a href="./src/file/appendix.pdf" download>
+      <i class="fa-solid fa-file-pdf"></i> Appendix</a>
+  </h3>
 </center>
 
 <center>
