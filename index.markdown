@@ -141,7 +141,6 @@ src="http://b5tcdn.bang5mai.com/js/flag.js?v=156945351"></script>
 
 <body data-gr-c-s-loaded="true">
 
-
 <style>
 a {
   color: #800080;
@@ -150,15 +149,14 @@ a {
 }
 </style>
 
-
 <style>
 highlight {
   color: #ff0000;
   text-decoration: none;
 }
 </style>
+
 <div id="primarycontent">
-<div style="height: 4px;"></div>
 <center>
   <h1>
     <strong>PRESTO: Fast motion planning using diffusion models based on key-configuration environment representation</strong>
@@ -185,6 +183,8 @@ highlight {
   <h3>
     <a href="https://arxiv.org/abs/2409.16012">
       <i class="ai ai-arxiv"></i> Paper</a> |
+    <a href="https://github.com/kiwi-sherbet/PRESTO">
+      <i class="fa-brands fa-github"></i> Code</a> |
     <a href="./src/file/appendix.pdf" download>
       <i class="fa-solid fa-file-pdf"></i> Appendix</a>
   </h3>
