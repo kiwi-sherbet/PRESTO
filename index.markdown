@@ -171,15 +171,13 @@ highlight {
     <a href="https://yukezhu.me/">Yuke Zhu<sup>1&dagger;</sup></a>&nbsp;&nbsp;&nbsp;
     <a href="https://beomjoonkim.github.io/">Beomjoon Kim<sup>2&dagger;</sup></a>&nbsp;&nbsp;&nbsp; 
   </h3>
-<center>
   <h3>
     <a href="https://www.utexas.edu/"><sup>1</sup>UT Austin</a>&nbsp;&nbsp;&nbsp;
     <a href="https://www.kaist.ac.kr/en/"><sup>2</sup>KAIST</a>&nbsp;&nbsp;&nbsp;
     <sup>*</sup> Equal contribution&nbsp;&nbsp;&nbsp;
     <sup>&dagger;</sup> Equal advising
   </h3>
-</center>
-<center>
+  <h3>IEEE International Conference on Robotics and Automation (ICRA), 2025</h3>
   <h3>
     <a href="https://arxiv.org/abs/2409.16012">
       <i class="ai ai-arxiv"></i> Paper</a> |
