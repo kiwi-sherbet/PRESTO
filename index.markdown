@@ -260,7 +260,7 @@ highlight {
       <tr>
         <center>
           <td align="center" valign="middle">
-            <a href="./src/figure/benchmark.svg"><img src="./src/figure/benchmark.svg" style="width:130%; margin-left:-15%;"> </a>
+            <a href="./src/figure/benchmark.svg"><img src="./src/figure/benchmark.svg" style="width:120%; margin-left:-10%;"> </a>
           </td>
         </center>
       </tr>
