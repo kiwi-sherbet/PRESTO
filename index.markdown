@@ -8,7 +8,7 @@ categories: projects
 <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>PRESTO: Fast motion planning using diffusion models based on key-configuration environment representation</title>
+  <title>PRESTO: Fast Motion Planning Using Diffusion Models Based on Key-Configuration Environment Representation</title>
 
 <!-- <meta property="og:image" content="src/figure/approach.png"> -->
 <meta property="og:title" content="PRESTO">
@@ -159,7 +159,7 @@ highlight {
 <div id="primarycontent">
 <center>
   <h1>
-    <strong>PRESTO: Fast motion planning using diffusion models based on key-configuration environment representation</strong>
+    <strong>PRESTO: Fast Motion Planning Using Diffusion Models Based on Key-Configuration Environment Representation</strong>
   </h1>
 </center>
 <center>
@@ -213,7 +213,7 @@ highlight {
         <tr>
           <td>
             <p align="justify" width="20%">
-              We introduce a learning-guided motion planning framework that provides initial seed trajectories using a diffusion model for trajectory optimization. Given a workspace, our method approximates the configuration space (C-space) obstacles through a key-configuration representation that consists of a sparse set of task-related key configurations, and uses this as an input to the diffusion model. The diffusion model integrates regularization terms that encourage collision avoidance and smooth trajectories during training, and trajectory optimization refines the generated seed trajectories to further correct any colliding segments. Our experimental results demonstrate that using high-quality trajectory priors, learned through our C-space-grounded diffusion model, enables efficient generation of collision-free trajectories in narrow-passage environments, outperforming prior learning- and planning-based baselines.
+              We introduce a learning-guided motion planning framework that generates seed trajectories using a diffusion model for trajectory optimization. Given a workspace, our method approximates the configuration space (C-space) obstacles through an environment representation consisting of a sparse set of task-related key configurations, which is then used as a conditioning input to the diffusion model. The diffusion model integrates regularization terms that encourage smooth, collision-free trajectories during training, and trajectory optimization refines the generated seed trajectories to correct any colliding segments. Our experimental results demonstrate that high-quality trajectory priors, learned through our C-space-grounded diffusion model, enable the efficient generation of collision-free trajectories in narrow-passage environments, outperforming previous learning- and planning-based baselines.
       	    </p>
           </td>
         </tr>
@@ -291,7 +291,7 @@ highlight {
     </tbody>
   </table>
   <table align=center width=800px><tr><td><p align="justify" width="20%">
-  Across all levels, PRESTO consistently outperforms the pure learning algorithms <a href="https://scenediffuser.github.io/">SceneDiffuser</a> and <a href="https://arxiv.org/abs/2308.01557">Motion Planning Diffuser (MPD)</a>, which lack a key-configuration-based environment representation and a motion-planning-based objective, respectively. Compared to Bi-RRT, PRESTO uses diffusion-learned trajectory priors to generate collision-free trajectories more efficiently, especially in narrow passages. Additionally, compared to <a href="https://rll.berkeley.edu/trajopt/doc/sphinx_build/html/">TrajOpt</a>, an optimization-based method, PRESTO's high-quality initial trajectories lead to faster convergence in complex domains, despite the computational overhead of running the diffusion model.
+  Across all levels, PRESTO consistently outperforms the pure learning algorithms <a href="https://scenediffuser.github.io/">SceneDiffuser</a> and <a href="https://arxiv.org/abs/2308.01557">Motion Planning Diffuser (MPD)</a>, which lack a key-configuration environment representation and a motion-planning objective, respectively. Compared to Bi-RRT, PRESTO uses diffusion-learned trajectory priors to generate collision-free trajectories more efficiently, especially in narrow passages. Additionally, compared to <a href="https://rll.berkeley.edu/trajopt/doc/sphinx_build/html/">TrajOpt</a>, an optimization-based method, PRESTO's high-quality initial trajectories lead to faster convergence in complex domains, despite the computational overhead of running the diffusion model.
   </p></td></tr></table>
 <hr>
 
@@ -307,7 +307,7 @@ highlight {
     </tbody>
   </table>
   <table align=center width=800px><tr><td><p align="justify" width="20%">
-  Compared to PRESTO, <i>Point-Cloud Conditioning</i> shows performance degradation across problem levels and post-processing iterations, with higher collision rates and penetration depths that worsen with complexity. Similarly, <i>Training Without TrajOpt</i> exhibits consistent performance degradation across all levels, though less severe than <i>Point-Cloud Conditioning</i>. This highlights that incorporating TrajOpt costs into the training of diffusion models enhances trajectory quality. Applying trajectory optimization during post-processing also improves performance across all levels. Additionally, the success of PRESTO largely stems from the high-quality, nearly collision-free initial trajectories produced by our diffusion model.
+  Compared to PRESTO, <i>Point-Cloud Conditioning</i> shows performance degradation across problem levels and post-processing iterations, with higher collision rates and penetration depths that worsen with complexity. Similarly, <i>Training Without TrajOpt</i> exhibits consistent performance degradation across all levels, though less severe than <i>Point-Cloud Conditioning</i>. This highlights that incorporating motion-planning costs into the training of diffusion models enhances trajectory quality. Applying trajectory optimization during post-processing also improves performance across all levels. Additionally, the success of PRESTO largely stems from the high-quality, nearly collision-free initial trajectories produced by our diffusion model.
   </p></td></tr></table>
   <br>
   <table border="0" cellspacing="10" cellpadding="0" align="center" width=800px> 
@@ -332,15 +332,13 @@ highlight {
     <td>
     <!-- <left> -->
     <pre><code style="display:block; overflow-x: auto">
-      @misc{seo2024presto,
-        title={PRESTO: Fast motion planning using diffusion models based on
-          key-configuration environment representation},
+      @inproceedings{seo2024presto,
+        title={PRESTO: Fast Motion Planning Using Diffusion Models Based on
+          Key-Configuration Environment Representation},
         author={Seo, Mingyo and Cho, Yoonyoung and Sung, Yoonchang and Stone, Peter and
           Zhu, Yuke and Kim, Beomjoon},
-        year={2024},
-        eprint={2409.16012},
-        archivePrefix={arXiv},
-        primaryClass={cs.RO}
+        booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
+        year={2025},
       }
     </code></pre>
     <!-- </left> -->
