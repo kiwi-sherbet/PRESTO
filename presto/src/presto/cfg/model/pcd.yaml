@@ -1,0 +1,22 @@
+model_type: dit_cloud
+seq_len: 256
+obs_dim: 7
+cond_dim: 1024
+embed_dim: 512
+dit_cloud:
+  input_size: 256
+  patch_size: 8
+  in_channels: 7
+  hidden_size: 512
+  num_layer: 6
+  num_heads: 16
+  mlp_ratio: 4.0
+  class_dropout_prob: 0.0
+  cond_dim: 1024
+  learn_sigma: false
+
+  use_cloud: true
+  cloud_size: 1024
+  cloud_block2: true
+  cond_type: last
+  use_cond_token: true

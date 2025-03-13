@@ -1,0 +1,37 @@
+defaults:
+  - data: base
+  - model: kcfg
+  - train: trajopt
+  - optional data_train: ${data}_${train}
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled  
+
+meta:
+  project: 'trajopt-distance'
+  task: 'test'
+  group: ddim-shelf-kcfg-rename
+
+path:
+  key_format: run-{:03d}
+  root: save/trajopt_distance
+  key: null
+
+diffusion:
+  num_train_diffusion_iter: 1024
+  pred_type: v_prediction
+  sched_type: ddim
+  rescale_betas_zero_snr: true
+  timestep_spacing: trailing
+  beta_start: 0.0001
+  beta_end: 0.02
+  beta_schedule: sqrt_cos
+  clip_sample: true
+
+x0_type: step
+device: cuda
+
+# Disable hydra logs
+hydra:
+  output_subdir: null
+  run:
+    dir: .

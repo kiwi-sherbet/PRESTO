@@ -1,0 +1,18 @@
+defaults:
+  - base
+diffusion_coef: 1.0
+distance_coef: 0.005
+collision_coef: 0.05
+euclidean_coef: 0.1
+
+# NOTE(ycho): needed for
+# fast collision-cost evaluations
+cost:
+  relabel: false
+  sweep: false
+  margin: 0.01
+cached_cost:
+  relabel: false
+  sweep: false
+  margin: 0.01
+use_cached: true

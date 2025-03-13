@@ -1,0 +1,24 @@
+learning_rate: 0.0003
+lr_warmup_steps: 2000
+num_epochs: 512
+batch_size: 128
+save_epoch: 64
+use_amp: false
+
+diffusion_coef: 1.0
+distance_coef: 0.0
+collision_coef: 0.0
+euclidean_coef: 0.1
+
+cost:
+  relabel: false
+  sweep: false
+  margin: 0.001
+cached_cost:
+  relabel: false
+  sweep: false
+  margin: 0.001
+use_cached: true
+
+weight_decay: 0.0
+
