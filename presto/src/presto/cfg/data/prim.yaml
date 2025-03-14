@@ -1,0 +1,6 @@
+defaults:
+  - base
+
+shelf:
+  binarize: false
+  prim_label: true

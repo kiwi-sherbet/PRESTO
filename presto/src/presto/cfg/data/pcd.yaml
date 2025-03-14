@@ -1,0 +1,5 @@
+defaults:
+  - base
+
+shelf:
+  add_cloud: true
