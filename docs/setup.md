@@ -15,7 +15,7 @@ pip install robosuite==1.4.1
 ```
 Then, set up the colors of collision meshes transparent in [these lines](https://github.com/ARISE-Initiative/robosuite/blob/eb01e1ffa46f1af0a3aa3ac363d5e63097a6cbcc/robosuite/utils/mjcf_utils.py#L18C39-L18C39) at `<robosuite-home>/utils/mjcf_utils.py`.
 
-The simulated environment is built on [LEGATO](https://github.com/UT-HCRL/LEGATO/tree/lite), implemented by Mingyo Seo, and the Bi-RRT baseline in the main manuscript is based on [motion-planner](https://github.com/caelan/motion-planners), implemented by Caelan Reed Garrett. For using these, install them as submodules.
+The simulated environment is built on [LEGATO](https://github.com/UT-HCRL/LEGATO), implemented by Mingyo Seo, and the Bi-RRT baseline in the main manuscript is based on [motion-planner](https://github.com/caelan/motion-planners), implemented by Caelan Reed Garrett. For using these, install them as submodules.
 ```
 git submodule update --init --recursive
 ```
