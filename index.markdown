@@ -335,8 +335,8 @@ highlight {
       @inproceedings{seo2024presto,
         title={PRESTO: Fast Motion Planning Using Diffusion Models Based on
           Key-Configuration Environment Representation},
-        author={Seo, Mingyo and Cho, Yoonyoung and Sung, Yoonchang and Stone, Peter and
-          Zhu, Yuke and Kim, Beomjoon},
+        author={Seo, Mingyo and Cho, Yoonyoung and Sung, Yoonchang and Stone, Peter 
+          and Zhu, Yuke and Kim, Beomjoon},
         booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
         year={2025},
       }
