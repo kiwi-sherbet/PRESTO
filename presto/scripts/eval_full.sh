@@ -24,7 +24,7 @@ for RUN_ID in ${RUN_IDS}; do
                     fi
 
                     TAG="NEW2-O${OPT}-D${DIF}-P0-N${OPT_STEP}"
-                    for d in data/etude_cabinet_eval/${DD}/merge-cloud-v2; do
+                    for d in data/presto_cabinet_eval/${DD}/merge-cloud-v2; do
                         KEY=$(basename $(dirname $d))
                         CUDA_VISIBLE_DEVICES=${CUDA_DEVICE} python3 presto/scripts/evaluate.py train.batch_size=1 device=cuda show=none \
                             load_dir="${LOAD_DIR}" \

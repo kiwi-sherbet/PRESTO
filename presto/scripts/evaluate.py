@@ -26,8 +26,8 @@ from presto.util.torch_util import dcn
 from presto.network.factory import (get_model, get_scheduler)
 
 from presto.diffusion.presto_pipeline import (
-    EtudePipeline,
-    EtudeGenerator,
+    PrestoPipeline,
+    PrestoGenerator,
     visualize_robot_motion,
     visualize_diffusion_chain
 )
@@ -45,7 +45,7 @@ from train import Config as TrainConfig
 
 @dataclass
 class Config(TrainConfig):
-    pipeline: EtudePipeline.Config = EtudePipeline.Config(
+    pipeline: PrestoPipeline.Config = PrestoPipeline.Config(
         n_guide_step=0,
         n_denoise_step=1,
         guide_start=50,
@@ -70,7 +70,7 @@ class Config(TrainConfig):
     load_normalizer: str = 'data'
     shuffle: bool = True
 
-    filter_file: str = 'data/etude_cabinet_eval/filtered_idx.json'
+    filter_file: str = 'data/presto_cabinet_eval/filtered_idx.json'
     skip_filtered: bool = False
     use_cloud: bool = False
 
@@ -79,7 +79,7 @@ def evaluate(
         cfg: Config,
         eval_step: int,
         dataset,
-        pipeline: EtudePipeline,
+        pipeline: PrestoPipeline,
         batch_size: int = 1,
         shuffle: bool = True,
         offset: int = 0,
@@ -92,9 +92,9 @@ def evaluate(
         cfg:
             Config instance.
         dataset:
-            Dataset instance (e.g. EtudeDataset1Sphere)
+            Dataset instance (e.g. PrestoDataset1Sphere)
         pipeline:
-            EtudePipeline instance.
+            PrestoPipeline instance.
         batch_size:
             Number of different scenes, for which the trajectory will be sampled.
             this is different from `cfg.pipeline.expand` which determines the
@@ -130,7 +130,7 @@ def evaluate(
 
     t0 = time.time()
     output = pipeline(
-        data_fn=EtudeGenerator(dataset,
+        data_fn=PrestoGenerator(dataset,
                                batch_size,
                                shuffle=shuffle,
                                offset=offset,
@@ -366,7 +366,7 @@ def sample(cfg: Config):
         print(test_dataset.normalizer.center,
               test_dataset.normalizer.radius)
 
-    pipeline = EtudePipeline(cfg.pipeline,
+    pipeline = PrestoPipeline(cfg.pipeline,
                              unet=model,
                              scheduler=sched,
                              batch_size=cfg.train.batch_size,

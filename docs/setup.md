@@ -17,8 +17,7 @@ Then, set up the colors of collision meshes transparent in [these lines](https:/
 
 The simulated environment is built on [LEGATO](https://github.com/UT-HCRL/LEGATO/tree/lite), implemented by Mingyo Seo, and the Bi-RRT baseline in the main manuscript is based on [motion-planner](https://github.com/caelan/motion-planners), implemented by Caelan Reed Garrett. For using these, install them as submodules.
 ```
-git submodule init
-git submodule update
+git submodule update --init --recursive
 ```
 
 

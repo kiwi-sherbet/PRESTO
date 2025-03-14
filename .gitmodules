@@ -1,8 +1,5 @@
-[submodule "external/motion-planners"]
-	path = external/motion-planners
-	url = https://github.com/caelan/motion-planners
-[submodule "external/LEGATO"]
-	path = external/LEGATO
+[submodule "external/legato"]
+	path = external/legato
 	url = https://github.com/UT-HCRL/LEGATO
-	branch = lite
-	depth = 1
+	branch = motion
+	shallow = true

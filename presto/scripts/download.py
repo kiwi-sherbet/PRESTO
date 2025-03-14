@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-
+import git
 from huggingface_hub import snapshot_download
 from pathlib import Path
 

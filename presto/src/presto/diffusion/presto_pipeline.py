@@ -41,7 +41,7 @@ from curobo.rollout.rollout_base import Goal, RolloutBase, RolloutMetrics
 from presto.data.encode_primitives import decode_primitives
 from presto.data.franka_util import (franka_fk, franka_link_transforms)
 from presto.data.sdf_util import build_geoms, build_rigid_body_chain
-from presto.data.presto_shelf import EtudeDatasetShelf, retime_trajectory
+from presto.data.presto_shelf import PrestoDatasetShelf, retime_trajectory
 from presto.util.ckpt import load_ckpt, last_ckpt
 from presto.util.path import get_path
 from presto.util.torch_util import dcn
@@ -345,7 +345,7 @@ def visualize_diffusion_chain(diffusion_chain,
             vis.poll_events()
             vis.update_renderer()
             time.sleep(0.001)
-        vis.capture_screen_image(F'/tmp/docker/etude-{T:03d}.png')
+        vis.capture_screen_image(F'/tmp/docker/presto-{T:03d}.png')
         start = False
 
     # WAIT FOREVER...
@@ -840,7 +840,7 @@ class GuideSD(nn.Module):
         return x.detach().clone() - grad.detach()
 
 
-class EtudePipeline(DiffusionPipeline):
+class PrestoPipeline(DiffusionPipeline):
 
     @dataclass
     class Config:
@@ -1272,7 +1272,7 @@ class EtudePipeline(DiffusionPipeline):
         return out
 
 
-class EtudeGenerator:
+class PrestoGenerator:
     def __init__(self,
                  dataset,
                  batch_size: int = 1,
@@ -1301,7 +1301,7 @@ class EtudeGenerator:
         dataset = self.dataset
         batch_size = self.batch_size
 
-        if isinstance(dataset, EtudeDatasetShelf):
+        if isinstance(dataset, PrestoDatasetShelf):
             N = len(dataset)
         else:
             N = len(dataset['trajectory'])
@@ -1324,7 +1324,7 @@ class EtudeGenerator:
         if self.index is not None:
             print(dataset[index]['env-label'][..., -14:])
 
-        if isinstance(dataset, EtudeDatasetShelf):
+        if isinstance(dataset, PrestoDatasetShelf):
             data = dataset[index]
             traj0 = data['trajectory']
             traj0 = traj0.swapaxes(-1, -2)  # necessary??
@@ -1381,7 +1381,7 @@ class EtudeGenerator:
 
         # Also output the input conditions for inspection.
         extras = {}
-        if isinstance(dataset, EtudeDatasetShelf):
+        if isinstance(dataset, PrestoDatasetShelf):
             extras['col-label'] = data['col-label']
             if 'prim-label' in data:
                 extras['prim-label'] = data['prim-label']
@@ -1396,7 +1396,7 @@ class EtudeGenerator:
         return (init, cond, constraint_fn, extras)
 
 
-def evaluate_etude(cfg,
+def evaluate_presto(cfg,
                    dataset,
                    pipeline,
                    batch_size: int = 1,
@@ -1411,7 +1411,7 @@ def evaluate_etude(cfg,
         step = cfg.diffusion.num_train_diffusion_iter
 
     output = pipeline(
-        data_fn=EtudeGenerator(dataset,
+        data_fn=PrestoGenerator(dataset,
                                batch_size,
                                shuffle=shuffle,
                                offset=offset,

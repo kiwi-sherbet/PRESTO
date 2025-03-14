@@ -10,7 +10,7 @@ from contextlib import contextmanager
 @dataclass
 class HfConfig:
     use_hfhub: bool = True
-    hf_repo_id: Optional[str] = 'dmp2023/etude-model'
+    hf_repo_id: Optional[str] = 'dmp2023/presto-model'
 
 
 def upload_ckpt(repo_id: str,
@@ -46,7 +46,7 @@ def download_ckpt(repo_id: str, name: str) -> str:
 
 @contextmanager
 def with_hfhub(ckpt_file: str,
-               hf_repo_id: str = 'dmp2023/etude-model',
+               hf_repo_id: str = 'dmp2023/presto-model',
                name: Optional[str] = None,
                use: bool = True):
     try:

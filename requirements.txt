@@ -8,6 +8,7 @@ pandas
 h5py
 matplotlib
 icecream
+gitdb
 tqdm
 yourdfpy
 coacd

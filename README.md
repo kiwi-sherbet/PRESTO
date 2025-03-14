@@ -1,4 +1,4 @@
-# PRESTO: Fast motion planning using diffusion models based on key-configuration environment representation
+# PRESTO: Fast Motion Planning Using Diffusion Models Based on Key-Configuration Environment Representation
 [Mingyo Seo](https://mingyoseo.com)&ast;, [Yoonyoung Cho](https://yycho0108.github.io/research)&ast;, [Yoonchang Sung](https://yoonchangsung.com/), [Peter Stone](https://www.cs.utexas.edu/~pstone/), [Yuke Zhu](https://www.cs.utexas.edu/~yukez)&dagger;, [Beomjoon Kim](https://beomjoonkim.github.io/)&dagger;
 
 [Project](https://kiwi-sherbet.github.io/PRESTO) | [arXiv](https://arxiv.org/abs/2409.16012)

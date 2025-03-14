@@ -15,6 +15,14 @@ Refer to [evaluate.py](presto/scripts/evaluate.py) regarding detailed script con
 To test a particular model, configure the `RUN_IDS` in [eval\_full.sh](presto/scripts/eval_full.sh) (default: run-326).
 
 
+# Evaluating Bi-RRT (Optional)
+To evaluate a trained model on the entire evaluation dataset, run the evaluation script as follows.
+```bash
+bash presto/scripts/eval_rrt.sh
+```
+Refer to [eval_rrt.py](presto/scripts/eval_rrt.py) regarding detailed script configuration.
+
+
 # Training Your Own Model
 
 You can train your own model as follows. The script by default asks for the name of your experiment interactively.
@@ -53,7 +61,3 @@ python3 presto/scripts/plot_ablation.py
 python3 presto/scripts/plot_guidance_ablation.py
 ```
 To plot your own evaluation results, modify the script contents to reference the appropriate `proc.pkl` file.
-
-
-# Evaluating Bi-RRT 
-Scripts will be released soon. Stay tuned!
