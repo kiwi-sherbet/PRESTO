@@ -19,7 +19,7 @@ If you find our work useful in your research, please consider [citing](#citing).
 
 
 ## Related Repositories
-The implementation of the simulated environment is based on [LEGATO](https://github.com/UT-HCRL/LEGATO/tree/lite), and the Bi-RRT baseline in the main manuscript is based on [motion-planner](https://github.com/caelan/motion-planners).
+The implementation of the simulated environment is based on [LEGATO](https://github.com/UT-HCRL/LEGATO), and the Bi-RRT baseline in the main manuscript is based on [motion-planner](https://github.com/caelan/motion-planners).
 
 
 ## Usage
