@@ -61,3 +61,10 @@ python3 presto/scripts/plot_ablation.py
 python3 presto/scripts/plot_guidance_ablation.py
 ```
 To plot your own evaluation results, modify the script contents to reference the appropriate `proc.pkl` file.
+
+# Troubleshooting
+
+```bash
+AttributeError: module 'OpenGL.EGL' has no attribute 'EGLDeviceEXT' 
+# try: python3 -m pip install --upgrade PyOpenGL PyOpenGL_accelerate
+```

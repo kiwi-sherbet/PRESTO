@@ -77,7 +77,7 @@ def load_rrt_data():
         
         for computation_time in computation_times:
             for obj in objects:
-                file_path = f"save/eval/bi-rrt_{computation_time}/{obj}/statistics.txt"
+                file_path = f"data/eval/bi-rrt/bi-rrt_{computation_time}/{obj}/statistics.txt"
                 
                 if os.path.exists(file_path):
                     log_data = parse_log_file(file_path)
@@ -89,7 +89,7 @@ def load_rrt_data():
 
     # Example of usage:
     computation_times = [1, 2, 4, 8, 16, 32, 64, 128, 500]  # Replace with actual computation times
-    objects = ["obj-0-0", "obj-1-1", "obj-2-2", "obj-3-4", "obj-5-6"]  # Replace with actual objects
+    objects = ["obj-0-0", "obj-1-1", "obj-2-2", "obj-3-4"]  # Replace with actual objects
 
     bi_rrt = parse_multiple_logs(computation_times, objects)
 

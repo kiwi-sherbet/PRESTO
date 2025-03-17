@@ -6,7 +6,7 @@ add_task_cond: true
 embed_init_goal: 128
 
 shelf:
-  dataset_dir: data/presto_cabinet-fix-full-012/merge-v3
+  dataset_dir: data/presto_cabinet_train/merge-v3
   stride: 3
   retime: true
   use_v2: true

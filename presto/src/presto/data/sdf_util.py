@@ -13,7 +13,7 @@ import torch as th
 try:
     import coacd
 except ImportError:
-    logging.debug('CoACD not found; `assume_convex` needs to be True for `build_geoms`.)
+    logging.debug('CoACD not found; `assume_convex` needs to be True for `build_geoms`.')
 
 import copy
 import trimesh

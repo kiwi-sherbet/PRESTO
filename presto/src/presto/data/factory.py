@@ -20,7 +20,6 @@ class DataConfig:
     dataset_dir: str = '/input/presto-simple'
     relative: bool = False
     start_zero: bool = False
-    presto: bool = False
     normalize: bool = False
     add_task_cond: bool = False
     load_cloud: bool = False

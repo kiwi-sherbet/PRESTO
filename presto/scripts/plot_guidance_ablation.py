@@ -53,7 +53,7 @@ def load_opt_data():
         "5.0": "obj-5-6"
     }
 
-    with open("save/eval/proc_guide.pkl", "rb") as file:
+    with open("data/eval/proc_presto_guide.pkl", "rb") as file:
         opt_data = pickle.load(file)
 
     # Convert the loaded data into the desired format with a mask

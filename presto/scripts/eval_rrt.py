@@ -18,6 +18,18 @@ from external.legato.utils import geom
 import external.legato.simulator.robots.panda as panda
 import time
 
+def stastics(
+         save_dir=os.path.join(git_root, "data", "eval", "bi-rrt"),
+         data_label="obj-0-0",
+         **kwargs):
+    
+    log_path = os.path.join(save_dir, data_label, "logs.json")
+
+    original_stdout = sys.stdout # Save a reference to the original standard output
+    with open(os.path.join(save_dir, data_label, "statistics.txt"), 'w') as f:
+        sys.stdout = f # Change the standard output to the file we created.
+        read_json(log_path)
+        sys.stdout = original_stdout # Reset the standard output to its original value
 
 def print_statistics(data):
 
@@ -85,12 +97,13 @@ def read_json(file_path):
 
 
 def eval(gui, 
-         cam_name, robot_name,
          seed, 
+         max_runtime,
+         cam_name, robot_name,
          vertical_slots, horizontal_slots, 
-         env_dir=os.path.join(git_root, "data/eval", "env_info"),
-         traj_dir=os.path.join(git_root, "data/eval", "traj_info"),
-         save_dir=os.path.join(git_root, "save/eval", "bi-rrt"),
+         env_dir=os.path.join(git_root, "data", "presto_cabinet_eval_rrt","env_info"),
+         traj_dir=os.path.join(git_root, "data", "presto_cabinet_eval_rrt", "traj_info"),
+         save_dir=os.path.join(git_root, "data", "eval", "bi-rrt"),
          data_label="obj-0-0",
          trj_idx=1,
          **kwargs):
@@ -107,6 +120,9 @@ def eval(gui,
     setup = SETUPS[robot_name]
     robot_type = setup['robot_type']
     env_config = setup['env_config']
+    mp_solver = setup['mp_solver']
+    mp_config = setup['mp_config']
+    mp_config.MAX_RUNTIME = max_runtime
 
     env_class = PrestoPrimitiveEnv
 
@@ -165,10 +181,7 @@ def eval(gui,
     
     env.reset(mode="forward", initial_qpos=init_qpos)
 
-    mp_solver = setup['mp_solver'](
-        config=setup['mp_config'],
-        env=env,
-        )
+    mp_solver = mp_solver(config=mp_config, env=env)
 
     init_time = time.time()
     try:
@@ -215,7 +228,9 @@ if __name__ == '__main__':
     parser.add_argument("--vertical_slots", type=int, default=3, help="")
     parser.add_argument("--horizontal_slots", type=int, default=1, help="")
     parser.add_argument("--label", type=str, default="obj-1-1", help="")
-    parser.add_argument("--data_path", type=str, default="data/birrt_presto_cabinet_eval", help="")
+    parser.add_argument("--data_path", type=str, default="data/presto_cabinet_eval_rrt", help="")
+    parser.add_argument("--save_path", type=str, default="data/eval/bi-rrt", help="")
+    parser.add_argument("--max_runtime", type=int, default=500, help="")
     parser.add_argument(
         "--cam",
         type=str,
@@ -231,17 +246,24 @@ if __name__ == '__main__':
     vertical_slots = args.vertical_slots
     horizontal_slots = args.horizontal_slots
     data_label = args.label
+    max_runtime = args.max_runtime
 
-    save_dir = os.path.join(git_root, "save/eval", "bi-rrt")
+    save_dir = os.path.join(git_root, args.save_path, "bi-rrt_{}".format(max_runtime))
+    
     if not os.path.exists(os.path.join(save_dir, data_label)):
         os.makedirs(os.path.join(save_dir, data_label), exist_ok=True)
+    traj_indices = [int(f.split(".")[0]) for f in os.listdir(os.path.join(args.data_path, "traj_info", data_label))]
 
-    for i in range(0, 256):
-        trj_idx = i + 1
-        eval(gui=gui, seed=0, 
+    for trj_idx in traj_indices:
+        eval(gui=gui, seed=0, max_runtime=args.max_runtime,
             cam_name=cam_name, robot_name=robot_name,
             vertical_slots=vertical_slots, horizontal_slots=horizontal_slots,
             trj_idx=trj_idx, data_label=data_label,
             env_dir=os.path.join(args.data_path, "env_info"),
             traj_dir=os.path.join(args.data_path, "traj_info"),
+            save_dir=save_dir,
             )
+
+    stastics(
+        data_label=data_label,
+        save_dir=save_dir)

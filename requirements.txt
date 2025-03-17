@@ -27,3 +27,4 @@ flash_attn==2.5.7
 mp_baselines
 scipy
 pytorch3d==0.7.6
+spatialmath-python
