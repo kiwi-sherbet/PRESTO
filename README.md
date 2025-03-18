@@ -27,7 +27,7 @@ Please see [Setup](docs/setup.md) and [Usage](docs/usage.md).
 
 
 ## Dataset and Pre-trained Models
-We provide our training and evaluation dataset, model, and relevant assets, available at [this](https://huggingface.co/dmp2023/presto-data) Hugging Face repo.
+We provide our training and evaluation dataset, model, and relevant assets, available at [this](https://huggingface.co/datasets/dmp2023/presto-data/tree/main) Hugging Face repo.
 
 
 ## Citing
