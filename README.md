@@ -37,7 +37,6 @@ We provide our training and evaluation dataset, model, and relevant assets, avai
       Key-Configuration Environment Representation},
    author={Seo, Mingyo and Cho, Yoonyoung and Sung, Yoonchang and Stone, Peter
       and Zhu, Yuke and Kim, Beomjoon},
-   year={2024},
    booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
    year={2025},
 }
