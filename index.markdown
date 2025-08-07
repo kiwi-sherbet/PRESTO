@@ -16,7 +16,7 @@ categories: projects
 <meta property="og:title" content="PRESTO">
 <meta property="og:description" content="PRESTO: Fast Motion Planning Using Diffusion Models Based on Key-Configuration Environment Representation">
 <meta property="og:image" content="https://raw.githubusercontent.com/kiwi-sherbet/PRESTO/main/docs/imgs/overview.png">
-<meta property="og:url" content="https://ut-hcrl.github.io/LEGATO/">
+<meta property="og:url" content="https://kiwi-sherbet.github.io/PRESTO/">
 
 <script src="./src/popup.js" type="text/javascript"></script>
 <script src="/src/js/viewstl/stl_viewer.min.js"></script>
