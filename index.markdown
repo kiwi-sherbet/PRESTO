@@ -336,7 +336,7 @@ highlight {
     <td>
     <pre><code style="display:block; overflow-x: auto">
       @inproceedings{seo2024presto,
-        title={PRESTO: Fast Motion Planning Using Diffusion Models Based on
+        title={{PRESTO}: Fast Motion Planning Using Diffusion Models Based on
           Key-Configuration Environment Representation},
         author={Seo, Mingyo and Cho, Yoonyoung and Sung, Yoonchang and Stone, Peter 
           and Zhu, Yuke and Kim, Beomjoon},
