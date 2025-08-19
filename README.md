@@ -33,7 +33,7 @@ We provide our training and evaluation dataset, model, and relevant assets, avai
 ## Citing
 ```
 @inproceedings{seo2024presto,
-   title={PRESTO: Fast Motion Planning Using Diffusion Models Based on 
+   title={{PRESTO}: Fast Motion Planning Using Diffusion Models Based on 
       Key-Configuration Environment Representation},
    author={Seo, Mingyo and Cho, Yoonyoung and Sung, Yoonchang and Stone, Peter
       and Zhu, Yuke and Kim, Beomjoon},
